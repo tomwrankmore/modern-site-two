@@ -3,12 +3,20 @@
 @mixin clearfix {};
 
 &--gutters {
-  margin-right: -65px;
+  margin-right: -65px; /*This removes extra margin on last right hand column*/
 }
 
-&--gutters > div {
+&--gutters-large {
+  margin-right: -100px;
+}
+
+&--gutters > div { /*This selects all children elements that use a tag of div*/
   padding-right: 65px;
   box-sizing: border-box; /*this applies padding but doesn't affect the width values below*/
+}
+
+&--gutters-large > div {
+  padding-right: 100px;
 }
 
 &__b-margin-until-medium {
@@ -26,6 +34,11 @@
   &__medium-4--larger {
     float: left;
     width: 37%;
+  }
+
+  &__medium-6 {
+    float: left;
+    width: 50%;
   }
 
   &__medium-8 {
