@@ -1,0 +1,14 @@
+.reveal-item {
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out, filter .2s ease-out;
+  transform: scale(1.15);
+  filter: blur(50px);
+  
+
+
+  &--is-visible {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
