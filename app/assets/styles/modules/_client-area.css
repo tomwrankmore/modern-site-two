@@ -12,4 +12,8 @@
   &__error {
     color: red;
   }
+
+  .btn {
+    cursor: pointer;
+  }
 }
