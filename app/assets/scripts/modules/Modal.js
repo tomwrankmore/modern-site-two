@@ -7,6 +7,17 @@ class Modal {
   }
 
   events() {
+    // document.querySelectorAll(".open-modal").forEach((el,i,p) =>
+      
+    //   el.addEventListener("click", (e) => {
+    //     e.preventDefault()
+    //     console.log("First returned forEach parameter is " + el + ".")
+    //     console.log("Second returned foreach parameter is " + i + ".")
+    //     console.log("Third returned for each parameter is " + p + ".")
+    //     console.log("Returned parameter of event listener is " + e + ".")
+    //   })
+    // )
+
     //listen for closing click
     this.closeIcon.addEventListener("click", () => this.closeTheModal())
 

@@ -10,7 +10,8 @@ new RevealOnScroll(document.querySelectorAll(".testimonial"), 90);
 new MobileMenu();
 let modal
 
-document.querySelectorAll(".open-modal").forEach(el => {
+//Only loads Modal.js if user clicks .open-modal button.
+document.querySelectorAll(".open-modal").forEach((el) => {
   el.addEventListener("click", e => {
     e.preventDefault()
     if(typeof modal == "undefined"){
@@ -28,3 +29,5 @@ document.querySelectorAll(".open-modal").forEach(el => {
 if(module.hot) {
   module.hot.accept()
 }
+
+// hot modules means that webpack generates javascript file to memory rather than creating a file.

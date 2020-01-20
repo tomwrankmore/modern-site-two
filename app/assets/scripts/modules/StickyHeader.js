@@ -43,7 +43,7 @@ class StickyHeader {
 
       let scrollPercent = el.getBoundingClientRect().y / this.browserHeight * 100
 
-      if(scrollPercent < 18 && scrollPercent > -0.1 && this.scrollDirection == 'down' || scrollPercent < 33 && this.scrollDirection == 'up') {
+      if(scrollPercent < 30 && scrollPercent > -0.1 && this.scrollDirection == 'down' || scrollPercent < 33 && this.scrollDirection == 'up') {
 
         let matchingLink = el.getAttribute("data-matching-link")
         

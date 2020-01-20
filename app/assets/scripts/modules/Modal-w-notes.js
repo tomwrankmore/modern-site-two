@@ -9,8 +9,9 @@ class Modal {
   }
 
   events() {
-    // listen for open click
+    listen for open click
     this.openModalButtons.forEach(el => el.addEventListener("click", e => this.openTheModal(e)))
+  })
 
     //the e parameter is populated with the event firing off.
     //the next parameter would be the index of the element in the returned node list
