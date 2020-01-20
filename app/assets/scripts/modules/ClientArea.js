@@ -17,10 +17,10 @@ class ClientArea {
   }
 
   sendRequest() {
-    Axios.post('https://sad-shockley-3dadab.netlify.com/.netlify/functions/secret-area', {password: this.field.value}).then((response => {
+    Axios.post('https://sad-shockley-3dadab.netlify.com/.netlify/functions/secret-area', {password: this.field.value}).then(response => {
       this.form.remove()
       this.contentArea.innerHTML = response.data 
-    })).catch(() => {
+    }).catch(() => {
       this.contentArea.injectHTML = `<p class="client-area__error">That phrase isn't right mate. Try again.</p>`
       this.field.value = ''
       this.field.focus()
