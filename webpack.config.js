@@ -45,8 +45,18 @@ let config = {
   plugins: pages,
   module: {
     rules:[
-      cssConfig
+      cssConfig,
       //this variable is established here but modified in both dev and production statements, to load css in different ways. Build version uses MiniCssExtractPlugin 
+      { //pushes new item onto rules array
+    test: /\.js$/, //only want rule to apply to js files
+    exclude: /(node_modules)/, // ignore node modules files
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env', '@babel/preset-react']
+      }
+    }
+  }
     ]
   }
 }
@@ -72,16 +82,7 @@ if(currentTask == 'dev') {
 
 //If it's build then it modifies config object with these:
 if(currentTask == 'build') {
-  config.module.rules.push({ //pushes new item onto rules array
-    test: /\.js$/, //only want rule to apply to js files
-    exclude: /(node_modules)/, // ignore node modules files
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env']
-      }
-    }
-  })
+  config.module.rules.push()
 
   cssConfig.use.unshift(MiniCssExtractPlugin.loader)
   postCSSPlugins.push(require('cssnano'))

@@ -100,7 +100,7 @@
       &::after {
         transform: rotate(-45deg) scaleX(1.25) translateY(1px);
       }
-      .site-header__menu-icon__middle {
+      .header__menu-icon__middle {
         opacity: 0;
         transform: scaleX(0);
       }
