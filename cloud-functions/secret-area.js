@@ -1,7 +1,7 @@
 exports.handler = function(event, context, callback) {
   
   const secretContent = `
-  <h3>Welcome to the super secret aread</h3>
+  <h3>Welcome to the super secret area</h3>
   <p>Some old <strong>bullshit</strong></p>
   `
   let body
